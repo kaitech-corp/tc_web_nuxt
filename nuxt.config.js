@@ -44,7 +44,7 @@ export default {
     defaultAssets: {
       fonts: {
         family: 'Playfair Display',
-      }
+      },
     },
     treeShake: true,
     customVariables: ['~/assets/variables.scss'],
@@ -67,14 +67,12 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     extend(config, ctx) {
-
       config.module.rules.push({
         enforce: 'pre',
         test: /\.txt$/,
         loader: 'raw-loader',
-        exclude: /(node_modules)/
-      });
-
-    }
+        exclude: /(node_modules)/,
+      })
+    },
   },
 }
