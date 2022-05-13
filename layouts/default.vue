@@ -6,9 +6,9 @@
       :mini-variant="miniVariant"
       :clipped="clipped"
       fixed
-      app
+      temporary
     >
-      <TCLogo class="ma-2" justify="center" />
+      <TCLogo class="ma-2" />
       <v-list>
         <v-list-item
           v-for="(item, i) in items"
@@ -26,23 +26,19 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    
-      <v-toolbar>
-      <v-app-bar-nav-icon class="mt-2" @click.stop="drawer = !drawer" />
+
+    <v-toolbar>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <TCIconLogo />
       <v-col align="end">
-        <v-btn 
-        plain
-        :to="items[1].to"
-        v-text="items[1].title"
-         />
-        
+        <v-btn plain :to="items[1].to" v-text="items[1].title" />
+
         <v-btn icon>
           <v-icon>mdi-download</v-icon>
         </v-btn>
       </v-col>
-      </v-toolbar>
-    
+    </v-toolbar>
+
     <v-main>
       <Nuxt />
     </v-main>
@@ -87,7 +83,7 @@ export default {
   name: 'DefaultLayout',
   data() {
     return {
-      clipped: true,
+      clipped: false,
       drawer: false,
       fixed: true,
       items: [
@@ -100,16 +96,6 @@ export default {
           icon: 'mdi-chart-bubble',
           title: 'XplorChain',
           to: 'XplorChain',
-        },
-        {
-          icon: 'mdi-apps',
-          title: 'Features',
-          to: '/',
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'TC Highlights',
-          to: '/',
         },
         {
           icon: 'mdi-apps',

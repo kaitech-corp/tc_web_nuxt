@@ -11,8 +11,14 @@
       :key="feature.id"
       :data="feature"
     />
-    <HighlightSection v-if="!$vuetify.breakpoint.mobile" :data="highlightsData[0]" />
-    <HighlightCarousel v-if="$vuetify.breakpoint.mobile" :data="highlightsData[0].cards"/>
+    <HighlightSection
+      v-if="!$vuetify.breakpoint.mobile"
+      :data="highlightsData[0]"
+    />
+    <HighlightCarousel
+      v-if="$vuetify.breakpoint.mobile"
+      :data="highlightsData[0].cards"
+    />
     <TestimonialSection :data="testomonialsData[0]" />
   </v-col>
 </template>

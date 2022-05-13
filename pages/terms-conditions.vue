@@ -1,13 +1,16 @@
 <template>
-<v-container>
-  <div>
-    <h1 class="ma-6 pb-2" style="text-align:center">{{ termsInfo.title }}</h1>
-    <v-spacer></v-spacer>
-    <h4 class="ma-6 pb-2" style="text-align:center">{{ termsInfo.subtitle }}</h4>
-    <PolicyItem 
-    :data="termsInfo.description" />
-  </div>
-</v-container>
+  <v-container>
+    <div>
+      <h1 class="ma-6 pb-2" style="text-align: center">
+        {{ termsInfo.title }}
+      </h1>
+      <v-spacer></v-spacer>
+      <h4 class="ma-6 pb-2" style="text-align: center">
+        {{ termsInfo.subtitle }}
+      </h4>
+      <PolicyItem :data="termsInfo.description" />
+    </div>
+  </v-container>
 </template>
 
 <script>
@@ -21,5 +24,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

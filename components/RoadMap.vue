@@ -1,5 +1,5 @@
 <template>
-  <div class="blue lighten-5">
+  <div>
     <v-container>
       <v-col align="center">
         <div>
@@ -11,13 +11,15 @@
           <p class="description">{{ data.description }}</p>
         </div>
       </v-col>
-      <v-row justify="center">
-        <MarketPlaceItem
-          v-for="item in data.cards"
-          :key="item.id"
-          :data="item"
-        />
-      </v-row>
+      <v-container>
+        <v-row v-for="(j, index) in justify" :key="j" :justify="j">
+          <v-col v-for="k in 1" :key="k" md="6">
+            <transition name="bounce">
+              <RoadMapItem :data="data.cards[index]"></RoadMapItem>
+            </transition>
+          </v-col>
+        </v-row>
+      </v-container>
     </v-container>
   </div>
 </template>
@@ -30,14 +32,13 @@ export default {
       default: null,
     },
   },
+  data: () => ({
+    justify: ['start', 'end', 'start', 'end', 'start'],
+  }),
 }
 </script>
 
 <style scoped>
-.image {
-  max-width: 400px;
-}
-
 .header {
   font-size: 48px;
   line-height: 68px;
@@ -48,5 +49,19 @@ export default {
   font-size: 25px;
   line-height: 32px;
   font-weight: 500;
+
+  /* font-family: monospace; */
 }
+
+.bounce-enter-from {
+  opacity: 0;
+}
+
+.bounce-enter-active {
+  transition: all 2s ease;
+}
+
+/* .bounce-leave-to {
+    opacity: 0
+} */
 </style>

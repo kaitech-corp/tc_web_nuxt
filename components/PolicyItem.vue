@@ -1,25 +1,20 @@
 <template>
-    <div>
-        <v-row 
-        v-for="line in data"
-        :key="line"
-        >
-      <p style="text-align:justify">{{ line }}</p>
+  <div>
+    <v-row v-for="line in data" :key="line">
+      <p style="text-align: justify">{{ line }}</p>
     </v-row>
-    </div>
+  </div>
 </template>
 
 <script>
-    export default {
-        props: {
+export default {
+  props: {
     data: {
       type: Array,
       default: null,
     },
   },
-    }
+}
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

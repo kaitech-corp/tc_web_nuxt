@@ -1,10 +1,9 @@
 <template>
   <div>
     <v-container v-if="data.id">
-      
       <v-layout row no-gutters justify-space-between align-center>
         <div style="width: 50%">
-          <v-col >
+          <v-col>
             <div>
               <h1 class="header">
                 {{ data.header }}
