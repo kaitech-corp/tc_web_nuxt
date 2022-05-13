@@ -1,19 +1,16 @@
 <template>
   <div class="blue lighten-5">
-    
-      <v-col align="center">
-        <div>
-          <h1 class="header">
-            {{ data.header }}
-          </h1>
-        </div>
-        <div>
-          <p class="description">{{ data.description }}</p>
-        </div>
-      </v-col>
-      <HighlightItem :data="data.cards" />
-      
-    
+    <v-col align="center">
+      <div>
+        <h1 class="header">
+          {{ data.header }}
+        </h1>
+      </div>
+      <div>
+        <p class="description">{{ data.description }}</p>
+      </div>
+    </v-col>
+    <HighlightItem :data="data.cards" />
   </div>
 </template>
 

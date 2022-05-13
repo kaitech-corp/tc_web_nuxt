@@ -1,9 +1,5 @@
 <template>
-  <v-banner 
-  align="center"
-  single-line
-  color="#0052ff"
-  >
+  <v-banner align="center" single-line color="#0052ff">
     Join the wait list for special access to XplorChain→
   </v-banner>
 </template>
