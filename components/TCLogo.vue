@@ -1,5 +1,7 @@
 <template>
-  <img class="tc-logo" alt="TC Logo" src="/Launch-512.png" />
+  <div style="text-align: center">
+    <img class="tc-logo" alt="TC Logo" src="/Launch-512.png" />
+  </div>
 </template>
 
 <style>
@@ -7,6 +9,4 @@
   height: 150px;
   width: 150px;
 }
-
-
 </style>

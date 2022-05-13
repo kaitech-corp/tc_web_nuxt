@@ -1,9 +1,6 @@
 <template>
   <v-card rounded elevation="24" max-width="444" class="mx-auto">
-    <v-carousel
-    cycle=true
-    continuous=true
-    >
+    <v-carousel cycle="true" continuous="true">
       <v-carousel-item v-for="highlight in data" :key="highlight.id">
         <v-img
           :src="require(`@/assets/images/${highlight.image || 'web1.png'}`)"
@@ -34,7 +31,6 @@ export default {
 
 <style scoped>
 .image {
-  /* width: 25%; */
   max-height: 400px;
 }
 </style>
