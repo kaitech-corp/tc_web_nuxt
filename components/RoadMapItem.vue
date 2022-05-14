@@ -1,9 +1,9 @@
 <template>
   <div>
     <v-container>
-      <v-card width="450" elevation="3" class="pa-4">
+      <v-card width="450" elevation="3" class="grey lighten-5 pa-4">
         <div>
-          <h4 class="heading">{{ data.title }}</h4>
+          <h4 class="heading pb-2">{{ data.title }}</h4>
         </div>
         <div>
           <p class="description">{{ data.description }}</p>

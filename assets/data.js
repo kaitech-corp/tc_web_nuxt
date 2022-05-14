@@ -333,7 +333,7 @@ export const marketplace = [
         id: 4,
         title: 'Share',
         description:
-          "Share with friends and family all the places you've been or put your travel history on display for everyone to see!",
+          "Share with friends and family all the places you've been. You can even put your travel history on display for everyone to see!",
       },
     ],
   },
@@ -381,3 +381,12 @@ export const roadMap = [
     ],
   },
 ]
+
+export const creators = [{
+  id: 1,
+  name: 'CreatorsCorner',
+  header: 'Creators Corner',
+  description: 'Become a Xplorchain creator and list your NFTs!',
+  description2: 'Join our Creators Expo to participate and learn more. Details coming soon!',
+
+}]

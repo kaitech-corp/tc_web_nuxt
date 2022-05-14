@@ -1,10 +1,10 @@
 <template>
   <div>
     <v-container>
-      <v-card max-width="250" height="450" elevation="2">
+      <v-card max-width="250" height="350" elevation="2" class="grey lighten-5 pa-2">
         <v-col>
           <div>
-            <h4 class="heading">{{ data.title }}</h4>
+            <h4 class="heading pb-4">{{ data.title }}</h4>
           </div>
           <div>
             <p class="description">{{ data.description }}</p>

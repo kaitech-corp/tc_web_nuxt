@@ -31,8 +31,7 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <TCIconLogo />
       <v-col align="end">
-        <v-btn plain :to="items[1].to" v-text="items[1].title" />
-
+        <v-btn plain text :to="items[1].to" v-text="items[1].title" />
         <v-btn icon>
           <v-icon>mdi-download</v-icon>
         </v-btn>
@@ -46,28 +45,32 @@
       <v-container>
         <v-col align="center">
           <v-row no-gutters justify="space-between" align="center">
-            <v-btn
-              v-for="link in links"
-              :key="link.id"
-              color="black"
-              text
-              rounded
-              class="my-2"
-            >
-              <NuxtLink :to="link.route">{{ link.text }}</NuxtLink>
-            </v-btn>
-            <v-btn
-              v-for="icon in icons"
-              :key="icon.id"
-              class="mx-2 black--text"
-              icon
-              elevation="2"
-              :href="icon.link"
-            >
-              <v-icon size="24px">
-                {{ icon.icon }}
-              </v-icon>
-            </v-btn>
+            <div>
+              <v-btn
+                v-for="link in links"
+                :key="link.id"
+                color="black"
+                text
+                rounded
+                class="my-2"
+              >
+                <NuxtLink :to="link.route">{{ link.text }}</NuxtLink>
+              </v-btn>
+            </div>
+            <div>
+              <v-btn
+                v-for="icon in icons"
+                :key="icon.id"
+                class="mx-2 black--text"
+                icon
+                elevation="2"
+                :href="icon.link"
+              >
+                <v-icon size="24px">
+                  {{ icon.icon }}
+                </v-icon>
+              </v-btn>
+            </div>
           </v-row>
           <span
             >&copy; {{ new Date().getFullYear() }} Kai Technologies Corp</span

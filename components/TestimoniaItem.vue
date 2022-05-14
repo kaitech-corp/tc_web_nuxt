@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-container>
-      <v-card max-width="250" height="450" elevation="2">
+      <v-card max-width="250" height="450" elevation="2" class="grey lighten-5">
         <v-col>
           <div>
             <p class="description">{{ data.description }}</p>
