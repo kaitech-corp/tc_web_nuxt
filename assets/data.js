@@ -315,7 +315,7 @@ export const marketplace = [
         id: 1,
         title: 'Explore',
         description:
-          'Check out what new gems await you at your destination local artists wherever you are in the world.',
+          'Check out what new gems await you at your destination and find local artists wherever you are in the world.',
       },
       {
         id: 2,
@@ -327,7 +327,7 @@ export const marketplace = [
         id: 3,
         title: 'Create',
         description:
-          'Create your own NFT that depics your personal experience.',
+          'Create your own NFT that shows off your personal experience.',
       },
       {
         id: 4,
