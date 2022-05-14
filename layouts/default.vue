@@ -32,7 +32,7 @@
       <TCIconLogo />
       <v-col align="end">
         <v-btn plain text :to="items[1].to" v-text="items[1].title" />
-        <v-btn icon>
+        <v-btn icon @click="getDeviceType">
           <v-icon>mdi-download</v-icon>
         </v-btn>
       </v-col>
@@ -131,6 +131,18 @@ export default {
         },
       ],
     }
+  },
+  methods: {
+    getDeviceType() {
+      if (navigator.userAgent.toLowerCase().includes('android') > -1) {
+        window.location.href =
+          'https://play.google.com/store/apps/details?id=com.kaitechcorp.travelcrew'
+      }
+      if (navigator.userAgent.toLowerCase().includes('iphone') > -1) {
+        window.location.href =
+          'https://apps.apple.com/us/app/travel-crew/id1501930493'
+      }
+    },
   },
 }
 </script>
