@@ -29,9 +29,11 @@
 
     <v-toolbar>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <TCIconLogo />
-      <v-col align="end">
+      <!-- <TCIconLogo /> -->
+      <v-col align="start">
         <v-btn plain text :to="items[1].to" v-text="items[1].title" />
+        </v-col>
+        <v-col align="end">
         <v-btn icon @click="getDeviceType">
           <v-icon>mdi-download</v-icon>
         </v-btn>
