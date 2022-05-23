@@ -382,11 +382,13 @@ export const roadMap = [
   },
 ]
 
-export const creators = [{
-  id: 1,
-  name: 'CreatorsCorner',
-  header: 'Creators Corner',
-  description: 'Become a Xplorchain creator and list your NFTs!',
-  description2: 'Join our Creators Expo to participate and learn more. Details coming soon!',
-
-}]
+export const creators = [
+  {
+    id: 1,
+    name: 'CreatorsCorner',
+    header: 'Creators Corner',
+    description: 'Become a Xplorchain creator and list your NFTs!',
+    description2:
+      'Join our Creators Expo to participate and learn more. Details coming soon!',
+  },
+]
