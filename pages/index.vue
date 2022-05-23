@@ -19,6 +19,7 @@
       v-if="$vuetify.breakpoint.mobile"
       :data="highlightsData[0].cards"
     />
+    <div class="mb-4"></div>
     <TestimonialSection :data="testomonialsData[0]" />
   </v-col>
 </template>
