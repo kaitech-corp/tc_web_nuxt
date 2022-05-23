@@ -29,12 +29,15 @@
 
     <v-toolbar>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <!-- <TCIconLogo /> -->
-      <v-col align="start">
-        <v-btn plain text :to="items[1].to" v-text="items[1].title" />
-        </v-col>
-        <v-col align="end">
-        <v-btn icon @click="getDeviceType">
+      <v-col align="end">
+        <button
+          v-if="!$vuetify.breakpoint.mobile"
+          class="button-primary"
+          @click="getDeviceType"
+        >
+          <v-icon color="white">mdi-download</v-icon> Download Now!
+        </button>
+        <v-btn v-if="$vuetify.breakpoint.mobile" icon @click="getDeviceType">
           <v-icon>mdi-download</v-icon>
         </v-btn>
       </v-col>
@@ -43,11 +46,11 @@
     <v-main>
       <Nuxt />
     </v-main>
-    <v-footer :absolute="!fixed" app>
+    <v-footer absolute app>
       <v-container>
         <v-col align="center">
           <v-row no-gutters justify="space-between" align="center">
-            <div>
+            <div v-if="!$vuetify.breakpoint.mobile">
               <v-btn
                 v-for="link in links"
                 :key="link.id"
@@ -148,3 +151,20 @@ export default {
   },
 }
 </script>
+<style scoped>
+.button-primary {
+  position: relative;
+  width: auto;
+  border-radius: 4px;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+
+  /* font-family: "Helvetica Neue"; */
+  padding: 10px 12px;
+  font-size: 14px;
+  line-height: 14px;
+  border: 1px solid #0052ff;
+  background-color: #0052ff;
+}
+</style>
