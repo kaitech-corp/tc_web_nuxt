@@ -2,25 +2,26 @@
   <div class="ma-6 pb-4 bgColor">
     <v-container>
       <v-layout row no-gutters justify-center align-center>
-        <v-col>
+        <v-col class="pb-4">
           <div>
-            <h1 class="header">
+            <h1 class="header" style="text-align: center">
               {{ data.header }}
             </h1>
           </div>
           <div>
-            <p class="description">{{ data.description }}</p>
-            <p class="description">{{ data.description2 }}</p>
-          </div>
-          <div>
-            <button class="button-primary">Download Now!</button>
+            <p class="description" style="text-align: center">
+              {{ data.description }}
+            </p>
+            <p class="description" style="text-align: center">
+              {{ data.description2 }}
+            </p>
           </div>
         </v-col>
         <div align="center">
           <v-img
+            :max-width="$vuetify.breakpoint.mobile ? 400 : 600"
             :src="require(`@/assets/images/${data.image || 'web1.png'}`)"
             alt="app image"
-            class="image"
           ></v-img>
         </div>
       </v-layout>
@@ -40,11 +41,6 @@ export default {
 </script>
 
 <style scoped>
-.image {
-  /* width: 25%; */
-  max-width: 600px;
-}
-
 .header {
   font-size: 48px;
   line-height: 68px;
@@ -61,21 +57,5 @@ export default {
 
 .download-button {
   display: inline-flex;
-}
-
-.button-primary {
-  position: relative;
-  width: auto;
-  border-radius: 4px;
-  font-weight: 500;
-  color: #fff;
-  cursor: pointer;
-
-  /* font-family: "Helvetica Neue"; */
-  padding: 10px 12px;
-  font-size: 14px;
-  line-height: 14px;
-  border: 1px solid #0052ff;
-  background-color: #0052ff;
 }
 </style>

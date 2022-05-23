@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="ma-3">
     <v-row v-for="line in data" :key="line">
       <p style="text-align: justify">{{ line }}</p>
     </v-row>

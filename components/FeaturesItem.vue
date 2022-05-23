@@ -1,21 +1,24 @@
 <template>
   <div>
-    <v-container v-if="data.id">
-      <v-layout row no-gutters justify-space-between align-center>
-        <div style="width: 50%">
-          <v-col>
+    <v-container v-if="data.id" class="my-4">
+      <v-layout row no-gutters justify-center align-center>
+        <v-col class="pb-4">
+          <div :style="{ width: width }">
             <div>
-              <h1 class="header">
+              <h1 class="header" style="text-align: center">
                 {{ data.header }}
               </h1>
             </div>
             <div>
-              <p class="description">{{ data.description }}</p>
+              <p class="description" style="text-align: center">
+                {{ data.description }}
+              </p>
             </div>
-          </v-col>
-        </div>
-        <div class="image">
+          </div>
+        </v-col>
+        <div align="center">
           <v-img
+            :max-width="$vuetify.breakpoint.mobile ? 400 : 500"
             :src="require(`@/assets/images/${data.image || 'web1.png'}`)"
             alt="app image"
           ></v-img>
@@ -31,6 +34,11 @@ export default {
     data: {
       type: Object,
       default: null,
+    },
+  },
+  computed: {
+    width() {
+      return this.$vuetify.breakpoint.mobile ? '100%' : '75%'
     },
   },
 }
