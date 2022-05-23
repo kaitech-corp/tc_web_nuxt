@@ -11,19 +11,24 @@
           <p class="description">{{ data.description }}</p>
         </div>
       </v-col>
-      <v-row justify="center">
+      <v-row v-if="!$vuetify.breakpoint.mobile" justify="center">
         <TestimoniaItem
           v-for="testimonial in data.cards"
           :key="testimonial.id"
           :data="testimonial"
         />
       </v-row>
+      <div v-if="$vuetify.breakpoint.mobile">
+        <TestimonyCarousel :data="data.cards" />
+      </div>
     </v-container>
   </div>
 </template>
 
 <script>
+import TestimonyCarousel from './TestimonyCarousel.vue'
 export default {
+  components: { TestimonyCarousel },
   props: {
     data: {
       type: Object,
