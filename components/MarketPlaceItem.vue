@@ -1,21 +1,32 @@
 <template>
   <div>
     <v-col>
-<v-container>
-      <v-card max-width="250" height="350" elevation="2" class="grey lighten-5 pa-2 rounded">
-        <v-col>
-          <div>
-            <h4 class="heading pa-4 gradient gradient-3 rounded" style="text-align: center">{{ data.title }}</h4>
-          </div>
-          <div>
-            <p class="description">{{ data.description }}</p>
-          </div>
-        </v-col>
-      </v-card>
-    </v-container>
-    <span v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm">⬅️Swipe➡️</span>
+      <v-container>
+        <v-card
+          max-width="250"
+          height="350"
+          elevation="2"
+          class="grey lighten-5 pa-2 rounded"
+        >
+          <v-col>
+            <div>
+              <h4
+                class="heading pa-4 gradient gradient-3 rounded"
+                style="text-align: center"
+              >
+                {{ data.title }}
+              </h4>
+            </div>
+            <div>
+              <p class="description">{{ data.description }}</p>
+            </div>
+          </v-col>
+        </v-card>
+      </v-container>
+      <span v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
+        >⬅️Swipe➡️</span
+      >
     </v-col>
-    
   </div>
 </template>
 
@@ -47,6 +58,6 @@ export default {
 }
 
 .gradient-3 {
-  background: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+  background: linear-gradient(45deg, #fa8bff 0%, #2bd2ff 52%, #2bff88 90%);
 }
 </style>
