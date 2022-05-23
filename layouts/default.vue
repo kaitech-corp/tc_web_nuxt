@@ -49,8 +49,8 @@
     <v-footer absolute app>
       <v-container>
         <v-col align="center">
-          <v-row no-gutters justify="space-between" align="center">
-            <div v-if="!$vuetify.breakpoint.mobile">
+          <v-row no-gutters justify="space-between">
+            <div class="ma-2">
               <v-btn
                 v-for="link in links"
                 :key="link.id"
@@ -62,7 +62,8 @@
                 <NuxtLink :to="link.route">{{ link.text }}</NuxtLink>
               </v-btn>
             </div>
-            <div>
+            <v-col align="center">
+            <div class="ma-2">
               <v-btn
                 v-for="icon in icons"
                 :key="icon.id"
@@ -76,8 +77,9 @@
                 </v-icon>
               </v-btn>
             </div>
+            </v-col>
           </v-row>
-          <span
+          <span class="ma-2"
             >&copy; {{ new Date().getFullYear() }} Kai Technologies Corp</span
           >
         </v-col>

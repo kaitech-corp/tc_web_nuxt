@@ -349,27 +349,27 @@ export const roadMap = [
         id: 1,
         title: 'Xplorchain Web3 Development',
         description: 'Development begins for Xplorchain.',
-        date: 'April 2022',
+        date: 'July 2022',
       },
       {
         id: 2,
         title: 'Creators Expo',
         description:
           'Creators from around the world design and create their location-based/point of interest NFTs to compete for free minting, tier level assignment and more.',
-        date: 'June 2022',
+        date: 'September 2022',
       },
       {
         id: 3,
         title: 'Early Adopters',
         description: 'Special release for waitlisted users.',
-        date: 'August 2022',
+        date: 'November 2022',
       },
       {
         id: 4,
         title: 'Marketplace Release',
         description:
           'Marketplace rollout with full functionality to mint, earn, trade and buy.',
-        date: 'November 2022',
+        date: 'December 2022',
       },
       {
         id: 5,

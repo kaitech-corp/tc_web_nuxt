@@ -18,7 +18,7 @@
         </v-col>
         <div align="center">
           <v-img
-            :max-width="$vuetify.breakpoint.mobile ? 400 : 500"
+            :max-width="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm ? 400 : 500"
             :src="require(`@/assets/images/${data.image || 'web1.png'}`)"
             alt="app image"
           ></v-img>
@@ -38,7 +38,7 @@ export default {
   },
   computed: {
     width() {
-      return this.$vuetify.breakpoint.mobile ? '100%' : '75%'
+        return this.$vuetify.breakpoint.xs || this.$vuetify.breakpoint.sm ? "100%" : "75%"
     },
   },
 }

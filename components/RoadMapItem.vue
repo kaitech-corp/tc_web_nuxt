@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-container>
-      <v-card width="450" elevation="3" class="grey lighten-5 pa-4">
+      <v-card width="450" elevation="3" class="grey lighten-4 pa-4">
         <div>
           <h4 class="heading pb-2">{{ data.title }}</h4>
         </div>
@@ -39,6 +39,7 @@ export default {
 .description {
   font-size: 20px;
   line-height: 32px;
+  font-weight: 500;
   color: black;
   text-align: center;
 }
@@ -48,5 +49,9 @@ export default {
   line-height: 32px;
   font-weight: 500;
   text-align: center;
+}
+
+.gradient-2 {
+    background: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
 }
 </style>

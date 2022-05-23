@@ -11,13 +11,16 @@
           <p class="description">{{ data.description }}</p>
         </div>
       </v-col>
-      <v-row justify="center">
+      <v-row v-if="!$vuetify.breakpoint.mobile || $vuetify.breakpoint.md" justify="center">
         <MarketPlaceItem
           v-for="item in data.cards"
           :key="item.id"
           :data="item"
         />
       </v-row>
+      <div v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm">
+        <MarketPlaceItemMobile :data="data.cards" />
+      </div>
     </v-container>
   </div>
 </template>

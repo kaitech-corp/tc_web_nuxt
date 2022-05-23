@@ -19,16 +19,16 @@
         />
       </v-row>
       <div v-if="$vuetify.breakpoint.mobile">
-        <TestimonyCarousel :data="data.cards" />
+        <TestimonyMobile :data="data.cards" />
       </div>
     </v-container>
   </div>
 </template>
 
 <script>
-import TestimonyCarousel from './TestimonyCarousel.vue'
+import TestimonyMobile from './TestimonyMobile.vue'
 export default {
-  components: { TestimonyCarousel },
+  components: { TestimonyMobile },
   props: {
     data: {
       type: Object,

@@ -12,6 +12,7 @@
         </v-col>
       </v-card>
     </v-container>
+    <span v-if="$vuetify.breakpoint.mobile">⬅️Swipe➡️</span>
   </div>
 </template>
 
