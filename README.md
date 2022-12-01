@@ -1,6 +1,6 @@
 # Travel Crew Web
 
-This is the new website for the Travel Crew enterprise including the highly anticipated Travel Chain currently under development.
+This is the website for the Travel Crew enterprise including the highly anticipated Travel Chain currently under development.
 
 ## [Original Website](https://www.travelcrew.app)
 
