@@ -28,6 +28,7 @@
     </v-navigation-drawer>
 
     <v-toolbar>
+      >>>>>>> Stashed changes
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <TCIconLogo />
       <v-col align="end">
